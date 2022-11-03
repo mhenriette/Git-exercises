@@ -301,3 +301,44 @@ TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (dev)
 $ git reset --hard 
 HEAD is now at bee007b about and home page
 ```
+
+## Bundle 2 
+### Exercise 1
+
+```bash
+git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/bundle-2)
+$ git add services.html 
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/bundle-2)
+$ git commit -m 'added service page '
+[ft/bundle-2 ca026dc] added service page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 services.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 471 bytes | 235.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/bundle-2)
+$
+```
