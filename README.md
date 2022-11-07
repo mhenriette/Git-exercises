@@ -624,3 +624,180 @@ TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
 $
 ```
 
+
+
+# Bundle 3
+
+## Exercise 1
+
+```bash
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git status 
+On branch main
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/team-page)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/team-page)
+$ git commit -m 'created team file '
+[ft/team-page dee64ea] created team file
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/team-page)
+$ git push origin ft/team-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 471 bytes | 235.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/team-page
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/team-page)
+$ git log 
+commit dee64eaa64c4c51413107b638aa8de5f1e2c7fbb (HEAD -> ft/team-page, origin/ft/team-page)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Mon Nov 7 13:17:15 2022 +0200
+
+    created team file
+
+commit f59b8f81bfd85d035548fd3100d2c454c775920b (origin/main, main, ft/contact-page)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Mon Nov 7 13:09:08 2022 +0200
+
+    added exercise 2 in Readme file
+
+commit a6e09a35bf0fad3a8c028ac5b142799797075819
+Author: mhenriette <mhenriette00@gnmail.com>
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/team-page)
+$ git checkout ft/contact-page 
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git cherry-pick dee64eaa64c4c51413107b638aa8de5f1e2c7fbb1
+fatal: bad revision 'dee64eaa64c4c51413107b638aa8de5f1e2c7fbb1'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git cherry-pick dee64eaa64c4c51413107b638aa8de5f1e2c7fbb
+[ft/contact-page ad9c29e] created team file
+ Date: Mon Nov 7 13:17:15 2022 +0200
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git commit -m 'added Contact page'
+[ft/contact-page 2826874] added Contact page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 contact.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git  push origin ft/contact-page 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 742 bytes | 371.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/contact-page
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ ls
+about.html  contact.html  home.html  README.md  services.html  team.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git commit -m 'added faq page '
+[ft/faq-page 46468de] added faq page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 faq.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git push origin ft/faq-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 459 bytes | 229.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/faq-page
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git revert dee64eaa64c4c51413107b638aa8de5f1e2c7fbb
+[ft/faq-page 2d9ec19] Revert "created team file"
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 team.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git commit -m 'reverted last commit of team page '
+On branch ft/faq-page
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git origin push ft/faq-page
+git: 'origin' is not a git command. See 'git --help'.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git push origin ft/faq-page 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 270 bytes | 135.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mhenriette/Git-Exercises.git
+   46468de..2d9ec19  ft/faq-page -> ft/faq-page
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$
+```
+
