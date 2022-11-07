@@ -342,3 +342,285 @@ To https://github.com/mhenriette/Git-Exercises.git
 TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/bundle-2)
 $
 ```
+### Exercise 2 
+
+```bash
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (dev)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git pull origin main
+From https://github.com/mhenriette/Git-Exercises
+ * branch            main       -> FETCH_HEAD
+Updating 2b9d3a1..2e12323
+Fast-forward
+ README.md     | 341 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    |  13 +++
+ home.html     |  13 +++
+ services.html |  13 +++
+ 4 files changed, 380 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git branch -D ft/service-redesign 
+Deleted branch ft/service-redesign (was 2b9d3a1).
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git branch
+  dev
+  ft/bundle-2
+* main
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git commit -m 'added changes to service file'
+[ft/service-redesign 83cdd48] added changes to service file
+ 1 file changed, 9 insertions(+)
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git push origin ft/service-redesign 
+fatal: unable to access 'https://github.com/mhenriette/Git-Exercises.git/': Failed to connect to github.com port 443 after 21118 ms: Timed out
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git push origin ft/service-redesign 
+fatal: unable to access 'https://github.com/mhenriette/Git-Exercises.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git push origin ft/service-redesign 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 411 bytes | 411.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ ls -a
+./  ../  .git/  about.html  home.html  README.md  services.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git status 
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout 
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git commit -m 'added different changes on main'
+[main a6e09a3] added different changes on main
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 190.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/mhenriette/Git-Exercises.git
+   2e12323..a6e09a3  main -> main
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout ft/service-redesign 
+Switched to branch 'ft/service-redesign'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git status 
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git diff
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git diff ?
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git diff main
+diff --git a/services.html b/services.html
+index ec30e19..1ac01dc 100644
+--- a/services.html
++++ b/services.html
+@@ -7,12 +7,16 @@
+     <title>Services</title>
+ </head>
+ <body>
+-    <h1>this is the old Services page</h1>
++    <h1>this is the Services page</h1>
++    <h1>These are the Services </h1>
++
++
+diff --git a/services.html b/services.html
+index ec30e19..1ac01dc 100644
+--- a/services.html
++++ b/services.html
+@@ -7,12 +7,16 @@
+     <title>Services</title>
+ </head>
+ <body>
+-    <h1>this is the old Services page</h1>
++    <h1>this is the Services page</h1>
++    <h1>These are the Services </h1>
++
+     <ul>
+-        <li>OUR SERVICES:</li>
+...skipping...
+     <ul>
+-        <li>OUR SERVICES:</li>
+-        <li>Fix Computers</li>
+-    </ul>
++        <li>Sell phones </li>
++        <li>Sell computers </li>
++        <li>make softwares </li>
++        <li>Install Internet</li>
+
++    </ul>
+
+
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign|MERGING)
+$ git merge main
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign|MERGING)
+$ git merge main
+Already up to date.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git status 
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git status 
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git commit -m 'resolved conflicts'
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git status 
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git merge 
+fatal: No remote for the current branch.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git diff
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git diff main
+diff --git a/services.html b/services.html
+index ec30e19..c3818b9 100644
+--- a/services.html
++++ b/services.html
+@@ -7,12 +7,7 @@
+     <title>Services</title>
+ </head>
+ <body>
+-    <h1>this is the old Services page</h1>
+-    <ul>
+-        <li>OUR SERVICES:</li>
+-        <li>Fix Computers</li>
+-    </ul>
+-
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git merge main
+Already up to date.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git commit -m 'resolved conflicts '
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git push origin ft/service-redesign 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 86.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/mhenriette/Git-Exercises.git
+   83cdd48..b3580a2  ft/service-redesign -> ft/service-redesign
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$
+```
+
