@@ -961,3 +961,166 @@ TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
 $
 
 ```
+## Exercise 2
+
+```bash
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git commit -m 'created a footer file'
+[ft/footer 399a6db] created a footer file
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git commit -m 'added content to the footer'
+[ft/footer cec234c] added content to the footer
+ 1 file changed, 4 insertions(+)
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git push origin ft/f
+ft/faq-page   ft/footer     
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git push origin ft/footer 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 765 bytes | 382.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/footer
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/footer -> ft/footer
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git status
+On branch ft/squashing
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating fab2970..cec234c
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+ create mode 100644 footer.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git log
+commit fab2970aa88127b9928f100212e41f62a4bdefe6 (HEAD -> ft/squashing, origin/main, main)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Tue Nov 8 12:41:17 2022 +0200
+
+    added exercise 1 of bundle 4
+
+commit b41189f12536c8c57fdb1de788d13954fa4eb7b6 (git-copy/main)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Tue Nov 8 12:36:44 2022 +0200
+
+    made changes to home page after git-copy
+
+commit 4547bab19992452ab7684a0b40abcbccfd950323
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git commit -m 'footer changes squashing'
+[ft/squashing 49e1988] footer changes squashing
+ 1 file changed, 17 insertions(+)
+ create mode 100644 footer.html
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git log
+commit 49e198886a65a14b7e09fd2199de4cd7c24791db (HEAD -> ft/squashing)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Tue Nov 8 13:01:24 2022 +0200
+
+    footer changes squashing
+
+commit fab2970aa88127b9928f100212e41f62a4bdefe6 (origin/main, main)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Tue Nov 8 12:41:17 2022 +0200
+
+    added exercise 1 of bundle 4
+
+commit b41189f12536c8c57fdb1de788d13954fa4eb7b6 (git-copy/main)
+Author: mhenriette <mhenriette00@gnmail.com>
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git push origin ft/squashing 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 502 bytes | 251.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/squashing
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git checkout ft/f
+ft/faq-page   ft/footer     
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/squashing)
+$ git checkout ft/footer 
+Switched to branch 'ft/footer'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$ git log
+commit cec234c10e5d19bc6004735128afd30ab86bf85a (HEAD -> ft/footer, origin/ft/footer)
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Tue Nov 8 12:44:35 2022 +0200
+
+    added content to the footer
+
+commit 399a6db599099596c0c1a7d13d044e1f9c8c841c
+Author: mhenriette <mhenriette00@gnmail.com>
+Date:   Tue Nov 8 12:43:43 2022 +0200
+
+    created a footer file
+
+commit fab2970aa88127b9928f100212e41f62a4bdefe6 (origin/main, main)
+Author: mhenriette <mhenriette00@gnmail.com>
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/footer)
+$
+```
