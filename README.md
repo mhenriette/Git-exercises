@@ -801,3 +801,94 @@ TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
 $
 ```
 
+### Exercise 2 
+```bash
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+  ft/service-redesign
+  ft/team-page
+* main
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git checkout main 
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git commit 'made changes on home page'
+error: pathspec 'made changes on home page' did not match any file(s) known to git
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git commit -m  'made changes on home page'
+[main 3ce6451] made changes on home page
+ 1 file changed, 1 insertion(+)
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 308 bytes | 154.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/mhenriette/Git-Exercises.git
+   d1488bc..3ce6451  main -> main
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$ git checkout ft/home-page-redesign 
+Switched to branch 'ft/home-page-redesign'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git add .
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git commit -m 'added changes on home page via ft/home-page-redesign'
+[ft/home-page-redesign 163cf4d] added changes on home page via ft/home-page-redesign
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git push origin main
+Everything up-to-date
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign 
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.59 KiB | 271.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/mhenriette/Git-Exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/mhenriette/Git-Exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-829KDOL MINGW64 ~/Documents/The Gym/Git-Exercise (main)
+$
+```
